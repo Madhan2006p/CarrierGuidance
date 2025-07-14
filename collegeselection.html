@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Selection Portal</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Career-Path</a>
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          
+        </button>
+    
+            
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="careerselect.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#assessment">Assessment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resources">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mentorship">Mentorship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#success">Success tories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <br><p class="h2 text-center fw bold">Explore Colleges</p><br>
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control border-2 border-dark"
+              placeholder="Search colleges by name, location, or program..."
+            />
+            <button
+              class="btn  border-2 border-dark"
+              type="button"
+            >search</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select border-2 border-dark" id= "sortSelect">
+            <option value="name">Sort by Name</option>
+            <option value="ranking">Sort by Ranking</option>
+            <option value="tuition">Sort by Tuition</option>
+            <option value="location">Sort by Location</option>
+          </select>
+        </div>
+      </div><br><br>
+       <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card border-primary">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">Total Colleges</h5>
+                        <h3 id="totalColleges">150</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-success">Public Universities</h5>
+                        <h3 id="publicCount">85</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-warning">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-warning">Private Universities</h5>
+                        <h3 id="privateCount">65</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-info">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-info">My Selections</h5>
+                        <h3 id="mySelections">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+ <div class="row">
+  <div class="container-fluid">
+<div  class="accordion" id="collegeAccordion">
+
+  <div class="accordion-item border dark">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#college1">
+        <div class="d-flex justify-content-between align-items-center w-100 me-3">
+          <div>
+            <strong>Kongu Engineering College</strong>
+            <span class="badge bg-danger ms-2">Private</span>
+            <small class="text-muted ms-2">Erode, Tamil Nadu</small>
+          </div>
+          <div class="text-end">
+            <small class="text-muted">Ranking: #1 (Anna Univ. Region)</small>
+          </div>
+        </div>
+      </button>
+    </h2>
+    <div id="college1" class="accordion-collapse collapse" data-bs-parent="#collegeAccordion">
+      <div class="accordion-body">
+        <p><strong>Acceptance Rate:</strong> 70% approx</p>
+        <p><strong>Tuition (per year):</strong> ₹120000</p>
+        <p><strong>Popular:</strong> CSE, ECE, Mech, IT</p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-bookmark"></i> Add to Selection
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">Visit Website</button>
+          <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#compareModal">
+          Compare
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#college2">
+        <div class="d-flex justify-content-between align-items-center w-100 me-3">
+          <div>
+            <strong>PSG College of Technology</strong>
+            <span class="badge bg-success ms-2">Autonomous</span>
+            <small class="text-muted ms-2">Coimbatore, Tamil Nadu</small>
+          </div>
+          <div class="text-end">
+            <small class="text-muted">Ranking: #2</small>
+          </div>
+        </div>
+      </button>
+    </h2>
+    <div id="college2" class="accordion-collapse collapse" data-bs-parent="#collegeAccordion">
+      <div class="accordion-body">
+        <p><strong>Acceptance Rate:</strong> Highly Competitive (TNEA merit)</p>
+        <p><strong>Tuition (per year):</strong> ₹87,000+</p>
+        <p><strong>Popular:</strong> AI-DS, Mechatronics, CSE, EEE</p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">
+        Add to Selection
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">Visit Website</button>
+          <button class="btn btn-outline-info btn-sm">
+           Compare
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#college3">
+        <div class="d-flex justify-content-between align-items-center w-100 me-3">
+          <div>
+            <strong>Kumaraguru College of Technology</strong>
+            <span class="badge bg-danger ms-2">Private</span>
+            <small class="text-muted ms-2">Coimbatore, Tamil Nadu</small>
+          </div>
+          <div class="text-end">
+            <small class="text-muted">Ranking: #3 (Popular Choice)</small>
+          </div>
+        </div>
+      </button>
+    </h2>
+    <div id="college3" class="accordion-collapse collapse" data-bs-parent="#collegeAccordion">
+      <div class="accordion-body">
+        <p><strong>Acceptance Rate:</strong> Moderate (via counseling)</p>
+        <p><strong>Total Cost:</strong> ₹1L–₹1.5L/year</p>
+        <p><strong>Popular:</strong> IT, AI-DS, ECE, Robotics</p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">
+         Add to Selection
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">
+             Visit Website
+          </button>
+          <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#compareModal">
+      Compare
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item border dark">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#college1">
+        <div class="d-flex justify-content-between align-items-center w-100 me-3">
+          <div>
+            <strong>Kongu Engineering College</strong>
+            <span class="badge bg-danger ms-2">Private</span>
+            <small class="text-muted ms-2">Erode, Tamil Nadu</small>
+          </div>
+          <div class="text-end">
+            <small class="text-muted">Ranking: #1 (Anna Univ. Region)</small>
+          </div>
+        </div>
+      </button>
+    </h2>
+    <div id="college1" class="accordion-collapse collapse" data-bs-parent="#collegeAccordion">
+      <div class="accordion-body">
+        <p><strong>Acceptance Rate:</strong> 70% approx</p>
+        <p><strong>Tuition (per year):</strong> ₹120000</p>
+        <p><strong>Popular:</strong> CSE, ECE, Mech, IT</p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-bookmark"></i> Add to Selection
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">Visit Website</button>
+          <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#compareModal">
+          Compare
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item border dark">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#college1">
+        <div class="d-flex justify-content-between align-items-center w-100 me-3">
+          <div>
+            <strong>Kongu Engineering College</strong>
+            <span class="badge bg-danger ms-2">Private</span>
+            <small class="text-muted ms-2">Erode, Tamil Nadu</small>
+          </div>
+          <div class="text-end">
+            <small class="text-muted">Ranking: #1 (Anna Univ. Region)</small>
+          </div>
+        </div>
+      </button>
+    </h2>
+    <div id="college1" class="accordion-collapse collapse" data-bs-parent="#collegeAccordion">
+      <div class="accordion-body">
+        <p><strong>Acceptance Rate:</strong> 70% approx</p>
+        <p><strong>Tuition (per year):</strong> ₹120000</p>
+        <p><strong>Popular:</strong> CSE, ECE, Mech, IT</p>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-bookmark"></i> Add to Selection
+          </button>
+          <button class="btn btn-outline-secondary btn-sm">Visit Website</button>
+          <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#compareModal">
+          Compare
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+<div class="table-responsive mt-5">
+  <table class="table table-bordered table-striped table-hover text-center align-middle">
+    <thead class="table-light sticky-top">
+      <tr>
+        <th>Detail</th>
+        <th>Kongu</th>
+        <th>PSG</th>
+        <th>Kumaraguru</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Location</th>
+        <td>Erode</td>
+        <td>Coimbatore</td>
+        <td>Coimbatore</td>
+      </tr>
+      <tr>
+        <th scope="row">Type</th>
+        <td>Private</td>
+        <td>Public-Aided</td>
+        <td>Private</td>
+      </tr>
+      <tr>
+        <th scope="row">Ranking</th>
+        <td>#1 Tier-I</td>
+        <td>#2 Tier-II</td>
+        <td>#3 Popular</td>
+      </tr>
+      <tr>
+        <th scope="row">Tuition Fee (per year)</th>
+        <td>₹1.2L</td>
+        <td>₹1.3L</td>
+        <td>₹1.5L</td>
+      </tr>
+      <tr>
+        <th scope="row">Popular Programs</th>
+        <td>CSE, ECE</td>
+        <td>CSE, Mech</td>
+        <td>AI-DS, IT</td>
+      </tr>
+      <tr>
+        <th scope="row">Financial Aid</th>
+        <td>Available</td>
+        <td>Available</td>
+        <td>Available</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

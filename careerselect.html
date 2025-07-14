@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career & Location Selection</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Career-Path</a>
+        <button
+          class="btn btn-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          
+        </button>
+    
+            
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="careerselect.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assessment.html">Assessment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mentorship.html">Mentorship</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <h1 class="mb-1">Career Selection</h1>
+      <p class="mb-0">Choose your preferred career path</p>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <div class="col-lg-8">
+        <div class="bg-white border border-dark rounded p-3">
+          <h4 class="bg-dark text-white p-2 rounded mb-4">Available Career Fields</h4>
+          
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Engineering</h5>
+                <p class="mb-1">Design, build, and maintain structures, machines, and systems</p>
+                <p class="text-muted">Duration: 4 years</p>
+                <button class="btn btn-primary btn-sm">Select</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Medicine</h5>
+                <p class="mb-1">Diagnose, treat, and prevent diseases and injuries</p>
+                <p class="text-muted">Duration: 5-6 years</p>
+                <button class="btn btn-warning btn-sm" >Select</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Business</h5>
+                <p class="mb-1">Manage organizations and commercial enterprises</p>
+                <p class="text-muted">Duration: 3-4 years</p>
+                <button class="btn btn-danger btn-sm">Select</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Arts & Design</h5>
+                <p class="mb-1">Create visual, performing, or literary works</p>
+                <p class="text-muted">Duration: 3-4 years</p>
+                <button class="btn btn-dark btn-sm">Select</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Law</h5>
+                <p class="mb-1">Practice legal profession and provide legal services</p>
+                <p class="text-muted">Duration: 5 years</p>
+                <button class="btn btn-success btn-sm" >Select</button>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="border rounded p-3 h-100">
+                <h5>Science</h5>
+                <p class="mb-1">Conduct research and advance scientific knowledge</p>
+                <p class="text-muted">Duration: 4 years</p>
+                <button class="btn btn-primary btn-sm" onclick="selectCareer('Science')">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+      
+        <div class="bg-white border border-dark rounded p-3 mb-4">
+          <h5 class="bg-dark text-white p-2 rounded mb-3">Career Highlights</h5>
+          <div id="careerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active p-3">
+                <h6 class="fw-bold">High Demand Careers</h6>
+                <p class="small">Engineering are in rapid growth.</p>
+              </div>
+              <div class="carousel-item p-3">
+                <h6 class="fw-bold">Healthcare Sector</h6>
+                <p class="small">Medical are always in high demand globally.</p>
+              </div>
+              <div class="carousel-item p-3">
+                <h6 class="fw-bold">Creative Industries</h6>
+                <p class="small">Arts and Design offer opportunities.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#careerCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#careerCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+            </button>
+          </div>
+        </div>
+    
+        <div class="bg-white border border-dark rounded p-3">
+  <h6 class="bg-dark text-white p-2 rounded mb-3">Selected Career</h6>
+  <p id="selectedCareer" class="text-muted">No career selected yet</p>
+  
+  <button class="btn btn-dark w-100" type="button" data-bs-toggle="collapse" data-bs-target="#careerDetails">
+    View Details
+  </button>
+  <div class="collapse mt-3" id="careerDetails">
+    <ul class="list-group">
+      <li class="list-group-item">Engineering: 4 years - Build systems</li>
+      <li class="list-group-item">Medicine: 5-6 years - Treat diseases</li>
+      <li class="list-group-item">Business: 3-4 years - Manage enterprises</li>
+      <li class="list-group-item">Arts & Design: 3-4 years - Creative works</li>
+      <li class="list-group-item">Law: 5 years - Legal services</li>
+      <li class="list-group-item">Science: 4 years - Research & innovation</li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="text-center mt-5">
+      <a href="collegeselection.html" class="btn btn-dark btn-lg me-3">Next</a>
+      <button class="btn btn-outline-dark btn-lg">Back</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

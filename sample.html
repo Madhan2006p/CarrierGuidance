@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuraSched GPU Scheduler Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0f4f8;
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    }
+    .task-priority {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4 text-primary">🎮 NeuraSched GPU Scheduler Dashboard</h1>
+
+    <!-- Task Table -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        Active GPU Tasks
+      </div>
+      <div class="card-body p-0">
+        <table class="table table-striped table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Task ID</th>
+              <th>App Name</th>
+              <th>Task Type</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#101</td>
+              <td>GameEngine.exe</td>
+              <td>Game</td>
+              <td><span class="badge bg-danger task-priority">High</span></td>
+              <td><span class="badge bg-success">Running</span></td>
+            </tr>
+            <tr>
+              <td>#102</td>
+              <td>TensorFlowTrain.py</td>
+              <td>ML</td>
+              <td><span class="badge bg-warning text-dark task-priority">Low</span></td>
+              <td><span class="badge bg-secondary">Queued</span></td>
+            </tr>
+            <tr>
+              <td>#103</td>
+              <td>OBSEncoder</td>
+              <td>Video Encoding</td>
+              <td><span class="badge bg-info text-dark task-priority">Medium</span></td>
+              <td><span class="badge bg-success">Running</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GPU Usage -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        GPU Usage
+      </div>
+      <div class="card-body">
+        <div class="progress" style="height: 25px;">
+          <div class="progress-bar bg-success" style="width: 75%;">75%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Comparison -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        Scheduler Comparison: FCFS vs NeuraSched
+      </div>
+      <div class="card-body">
+        <canvas id="schedulerChart" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap + Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Sample Chart.js bar graph
+    const ctx = document.getElementById('schedulerChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Game', 'ML', 'Encoder'],
+        datasets: [
+          {
+            label: 'FCFS (ms)',
+            data: [140, 280, 210],
+            backgroundColor: 'rgba(255, 99, 132, 0.5)'
+          },
+          {
+            label: 'NeuraSched (ms)',
+            data: [90, 300, 170],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Task Execution Delay Comparison'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

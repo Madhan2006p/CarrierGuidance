@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Assessment - Find Your Perfect Path</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Career-Path</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="careerselect.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assessment.html">Assessment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mentorship.html">Mentorship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3">Discover Your Career Path</h1>
+            <p class="lead mb-4">
+              Take our comprehensive assessment to uncover your strengths,
+              interests, and ideal career matches. Start your journey to
+              professional fulfillment today.
+            </p>
+            <div class="d-flex align-items-center">
+              <span>Estimated time: 15-20 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Assessment Progress</h5>
+              <div class="progress mb-2">
+                <div
+                  class="progress-bar bg-success"
+                  role="progressbar"
+                  style="width: 25%"
+                  id="progressBar"
+                >
+                  <span class="visually-hidden">0% Complete</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <small class="text-muted"
+                  >Section <span id="currentSection">1</span> of 4</small
+                >
+                <small class="text-muted"
+                  ><span id="progressPercent">25</span>% Complete</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="assessment-section" id="section2">
+        <div class="card shadow-sm mb-4">
+          <div class="card-header bg-success text-white">
+            <h4 class="mb-0">
+              <i class="fas fa-heart me-2"></i>
+              Interests and Values
+            </h4>
+          </div>
+          <div class="card-body">
+        
+            <div class="mb-4">
+              <h5>What motivates you most in a career? (Select up to 3)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation1"
+                      value="helping-others"
+                    />
+                    <label class="form-check-label" for="motivation1"
+                      >Helping others and making a difference</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation2"
+                      value="financial-security"
+                    />
+                    <label class="form-check-label" for="motivation2"
+                      >Financial security and stability</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation3"
+                      value="creativity"
+                    />
+                    <label class="form-check-label" for="motivation3"
+                      >Creative expression and innovation</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation4"
+                      value="leadership"
+                    />
+                    <label class="form-check-label" for="motivation4"
+                      >Leadership and influence</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation5"
+                      value="flexibility"
+                    />
+                    <label class="form-check-label" for="motivation5"
+                      >Work-life balance and flexibility</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation6"
+                      value="recognition"
+                    />
+                    <label class="form-check-label" for="motivation6"
+                      >Recognition and achievement</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation7"
+                      value="intellectual-challenge"
+                    />
+                    <label class="form-check-label" for="motivation7"
+                      >Intellectual challenges and learning</label
+                    >
+                  </div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="motivation8"
+                      value="autonomy"
+                    />
+                    <label class="form-check-label" for="motivation8"
+                      >Independence and autonomy</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h5>Which work environment appeals to you most?</h5>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="environment"
+                  id="env1"
+                  value="office"
+                />
+                <label class="form-check-label" for="env1"
+                  >Traditional office setting with colleagues</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="environment"
+                  id="env2"
+                  value="remote"
+                />
+                <label class="form-check-label" for="env2"
+                  >Remote work from home</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="environment"
+                  id="env3"
+                  value="hybrid"
+                />
+                <label class="form-check-label" for="env3"
+                  >Hybrid (mix of office and remote)</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="environment"
+                  id="env4"
+                  value="outdoor"
+                />
+                <label class="form-check-label" for="env4"
+                  >Outdoor or field work</label
+                >
+              </div>
+              <div class="form-check mb-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="environment"
+                  id="env5"
+                  value="travel"
+                />
+                <label class="form-check-label" for="env5"
+                  >Travel-based work</label
+                >
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h5>Rate your interest in these areas (1-5 scale)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Technology and Computing</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest1"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Healthcare and Medicine</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest2"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Business and Finance</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest3"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Arts and Design</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest4"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Education and Training</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest5"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Science and Research</label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="1"
+                      max="5"
+                      id="interest6"
+                    />
+                    <div class="d-flex justify-content-between">
+                      <small>Not interested</small
+                      ><small>Very interested</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+        <div class="text-end">
+  <a href="thankyou.html" class="btn btn-success">Finish</a>
+</div>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
